@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
   get 'page/about'
   get 'user/login'
   get 'sub/list'
