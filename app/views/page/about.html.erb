@@ -7,11 +7,10 @@
 </head>
 <body>
 <div class="topnav">
-    <a href="Home.html">Home</a>
-    <a href="SignUp.html">Login/Sign Up</a>
-    <a class="active" href="AboutUs.html">About Us</a>
-    <a href="Contact.html">Contact Us</a>
-
+  <a href="#home"><%= link_to "Home", sub_list_path %></a>
+  <a href="#login"><%= link_to "Login", user_login_path %></a>
+  <a class="active" href="#about"><%= link_to "About", page_about_path %></a>
+  <a href="#contact"><%= link_to "Contact", page_contact_path %></a>
 </div>
 <h1>Check out the site's developers</h1>
 <br>
@@ -27,7 +26,7 @@ services to possibly subscribe too.</p>
  an easy and manageable way to monitor our subscriptions and their respective payments!</p>
 </div>
 <div class="container">
-    <img src="Images/AppleMusicImage.jpg" width ="300px" height = "300px" alt="Avatar" class="image" style="width:100%">
+    <img src="/KillBillsProject/app/assets/images/AppleMusicImage.jpg" width ="300px" height = "300px" alt="Avatar" class="image" style="width:100%">
     <div class="middle">
         <div class="text">Brandon Burgess</div>
     </div>

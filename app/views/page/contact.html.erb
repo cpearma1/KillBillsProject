@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="Contact.css"/>
+</head>
+<body>
+<div class="topnav">
+  <a href="#home"><%= link_to "Home", sub_list_path %></a>
+  <a href="#login"><%= link_to "Login", user_login_path %></a>
+  <a href="#about"><%= link_to "About", page_about_path %></a>
+  <a class="active" href="#contact"><%= link_to "Contact", page_contact_path %></a>
+</div>
+
+<div class="container">
+    <div style="text-align:center">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out if you have any questions or concerns.</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="Images/KillBills.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="email">Your Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email address..">
+                <label for="creator">Who would you like to contact?</label>
+                <select id="creator" name="creator">
+                    <option value="Customer Service">Customer Service</option>
+                    <option value="Your Financial Institution">Your Financial Institution</option>
+                </select>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <a href="Submit.html">Submit</a>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
