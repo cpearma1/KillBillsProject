@@ -19,10 +19,8 @@
         <p>Feel free to reach out if you have any questions or concerns.</p>
     </div>
     <div class="row">
-        <div class="column">
-            <img src="Images/KillBills.jpg" style="width:100%">
-        </div>
-        <div class="column">
+        
+        <div class="container-fluid text-center">
             <form action="/action_page.php">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -35,9 +33,9 @@
                     <option value="Customer Service">Customer Service</option>
                     <option value="Your Financial Institution">Your Financial Institution</option>
                 </select>
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                <a href="Submit.html">Submit</a>
+                <br><label for="subject">Subject</label><br>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea><br>
+                <button type="submit"><%= link_to "Submit", sub_list_path %></button>
             </form>
         </div>
     </div>
