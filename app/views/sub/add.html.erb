@@ -24,13 +24,13 @@
       <label for="startdate"><b>Payment Start Date:</b></label>
       <input type="date" placeholder="Enter Payment Start Date" name="startdate" required><br>
       <form>
+          <br>
+          <p>Is This a Free Trial?</p>
           <input type="radio" name="freetrial" value="yes"> Yes<br>
           <input type="radio" name="freetrial" value="no"> No<br>
       </form>
-      <br><button type="submit">Submit</button>
+      <br><button type="submit"><%= link_to "Submit", sub_list_path %></button>
     </div>
-
-    <div class="container" style="background-color:#f1f1f1">
    
     </div>
   </form>
