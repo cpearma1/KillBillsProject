@@ -10,7 +10,7 @@ And ("I should see the psw field") do |string|
     expect(page).to have_field(string)
 end
 
-When("I click the the {string} button") do |string|
+When("I click the the {string} button") do
   click_button string
 end
 
