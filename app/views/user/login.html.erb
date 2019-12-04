@@ -1,8 +1,8 @@
 <div class="topnav">
   <a class="active" href="#home"><%= link_to "Home", sub_list_path %></a>
   <a href="#login"><%= link_to "Login", user_login_path %></a>
-  <a href="#about"><%= link_to "About", page_about_path %></a>
-  <a href="#contact">Contact</a>
+  <a href="#about"><%= link_to "About Us", page_about_path %></a>
+  <a href="#contact"><%= link_to "Contact", page_contact_path %></a>
 </div>
 
 <form action="action_page.php" method="post">
@@ -14,14 +14,17 @@
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit">Login</button>
+    <button type="submit"><%= link_to "Login", sub_list_path %></button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
+    
+    <br>
+    <br>
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
+
+  
+    
 </form>

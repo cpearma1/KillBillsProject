@@ -1,32 +1,28 @@
 
 <head>
     <title>Main Page</title>
+        <link rel="stylesheet" href="application.scss"/>
+
 </head>
 <body>
 
 <div class="topnav">
   <a class="active" href="#home"><%= link_to "Home", sub_list_path %></a>
   <a href="#login"><%= link_to "Login", user_login_path %></a>
-  <a href="#about"><%= link_to "About", page_about_path %></a>
-  <a href="#contact">Contact</a>
+  <a href="#about"><%= link_to "About Us", page_about_path %></a>
+  <a href="#contact"><%= link_to "Contact", page_contact_path %></a>
 </div>
 
 
 <div class="container">
-  <div class="container">
-  <div class="row">
-    <div class="col">
+    
       <h1>Kill Bills</h1>
       <br>
       <p>Ever signed up for a subscription service?</p>
       <p>Ever <strong>FORGET</strong> that you did that and put your card information in?</p>
       <p>We know we have, and we want to help you never forget what subscriptions you have and when and for how much those payments may be!</p>
       <p>Welcome to <strong>"Kill Bills"</strong>! Your subscription service reminder.</p>
-    </div>
 
-  <div class="col">
-    
-  </div>
   
   <form action="action_page.php" method="post">
   
@@ -35,15 +31,10 @@
       <input type="text" placeholder="Enter Username" name="uname" required><br>
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required><br>
-      <button type="submit">Login</button>
+      <button type="submit"><%= link_to "Login", sub_list_path %></button>
     </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-   
-    </div>
   </form>
-  
-  </div>
   
 </div>
 
