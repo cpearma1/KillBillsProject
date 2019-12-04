@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_040308) do
+ActiveRecord::Schema.define(version: 2019_12_04_171125) do
 
   create_table "subscriptions", force: :cascade do |t|
+    t.string "service_name"
     t.decimal "monthly_payment"
     t.date "date_subscribed"
     t.date "date_of_expiration"

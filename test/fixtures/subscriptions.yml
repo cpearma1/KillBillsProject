@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  service_name: MyString
   monthly_payment: 9.99
-  date_subscribed: 2019-11-25
-  date_of_expiration: 2019-11-25
+  date_subscribed: 2019-12-04
+  date_of_expiration: 2019-12-04
   free_trial: false
 
 two:
+  service_name: MyString
   monthly_payment: 9.99
-  date_subscribed: 2019-11-25
-  date_of_expiration: 2019-11-25
+  date_subscribed: 2019-12-04
+  date_of_expiration: 2019-12-04
   free_trial: false

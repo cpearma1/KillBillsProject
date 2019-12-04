@@ -1,6 +1,10 @@
 <h1> New Subscription! </h1>
 <%= form_for :subscription, url: subscriptions_path do |f| %>
 	<p>
+	<%= f.label :service_name %><br>
+		<%= f.text_field :service_name %>
+	</p>
+	<p>
 	<%= f.label :monthly_payment %><br>
 		<%= f.number_field :monthly_payment, :placeholder => '$', step: 0.01 %>
 	</p>
@@ -9,7 +13,7 @@
                 <%= f.date_field :date_subscribed, class: 'form-control' %>
 	</p>
 	<p>
-	<%= f.label :date_of_expiration %><br>
+	<%= f.label :date_of_payment_or_expiration %><br>
                 <%= f.date_field :date_of_expiration, class: 'form-control' %>
 	</p>
 	<p>
