@@ -14,7 +14,7 @@ class SubscriptionsController < ApplicationController
 		@subscription = Subscription.new(subscription_params)
 
 		@subscription.save
-		redirect_to @subscription
+		redirect_to subscriptions_path
 	end
 
 	def edit
@@ -24,7 +24,7 @@ class SubscriptionsController < ApplicationController
 	def update
 		@subscription =  Subscription.find(params[:id])
 		if @subscription.update(subscription_params)
-			redirect_to @subscription
+			redirect_to subscriptions_path
 		else
 			render 'edit'
 		end
