@@ -5,7 +5,7 @@
 <button type="button" class="btn btn-dark"><%= link_to 'New subscription', new_subscription_path %></button>
 </div>
 <br>
-<div class="table-responsive"> 
+<div class="table-responsive">
 <table class="table table-dark table-sm">
 	<thead>
   <tr>
@@ -15,7 +15,7 @@
 		<th>Date of Payment/Expiration</th>
 		<th>Free Trial</th>
   </tr>
-	</thead> 
+	</thead>
   <% @subscriptions.each do |subscription| %>
     <tr>
       <td><%= subscription.service_name %></td>
@@ -25,6 +25,10 @@
 			<td><%= subscription.free_trial %></td>
       <td><%= link_to 'Show', subscription_path(subscription) %></td><th></th>
       <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td><th></th>
+			<td><%= link_to 'Destroy',
+																subscription_path(subscription),
+																method: :delete,
+																data: { confirm: 'Are you sure?' } %></td><th></th>
     </tr>
   <% end %>
 </table>

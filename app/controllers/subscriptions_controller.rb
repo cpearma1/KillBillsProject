@@ -29,6 +29,13 @@ class SubscriptionsController < ApplicationController
 			render 'edit'
 		end
 	end
+
+	def destroy
+		@subscription = Subscription.find(params[:id])
+		@subscription.destroy
+
+		redirect_to subscriptions_path
+	end
 end
 
 private
