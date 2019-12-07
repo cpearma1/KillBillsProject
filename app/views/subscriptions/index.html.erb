@@ -24,6 +24,7 @@
 			<td><%= subscription.date_of_expiration %></td>
 			<td><%= subscription.free_trial %></td>
       <td><%= link_to 'Show', subscription_path(subscription) %></td><th></th>
+      <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td><th></th>
     </tr>
   <% end %>
 </table>

@@ -16,6 +16,19 @@ class SubscriptionsController < ApplicationController
 		@subscription.save
 		redirect_to @subscription
 	end
+
+	def edit
+		@subscription = Subscription.find(params[:id])
+	end
+
+	def update
+		@subscription =  Subscription.find(params[:id])
+		if @subscription.update(subscription_params)
+			redirect_to @subscription
+		else
+			render 'edit'
+		end
+	end
 end
 
 private
