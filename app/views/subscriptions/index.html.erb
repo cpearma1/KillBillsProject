@@ -19,7 +19,7 @@
   <% @subscriptions.each do |subscription| %>
     <tr>
       <td><%= subscription.service_name %></td>
-      <td><%= subscription.monthly_payment %></td>
+      <td>$<%= subscription.monthly_payment %></td>
 			<td><%= subscription.date_subscribed %></td>
 			<td><%= subscription.date_of_expiration %></td>
 			<td><%= subscription.free_trial %></td>

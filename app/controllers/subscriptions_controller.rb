@@ -1,6 +1,6 @@
 class SubscriptionsController < ApplicationController
 	def index
-		@subscriptions = Subscription.all
+		@subscriptions = Subscription.order('date_of_expiration ASC')
 	end
 
 	def show
