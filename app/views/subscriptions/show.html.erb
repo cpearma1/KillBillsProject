@@ -1,4 +1,5 @@
-<div class="container-fluid text-center">
+
+<div class="text-center">
   <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
 	  <div class="card-header"><%= @subscription.service_name %> <p>Free Trial -- </p> <%= @subscription.free_trial %></div>
   <div class="card-body">
@@ -6,3 +7,6 @@
     <p class="card-text">Date Subscribed: <%= @subscription.date_subscribed %> <br>Date of Payment or Expiration: <%= @subscription.date_of_expiration %> <br>Amount Due: $<%= @subscription.monthly_payment %></p>
   </div>
 </div>
+</div>
+<br>
+<button type="button" class="btn btn-dark"><%= link_to 'Subscription List', subscriptions_path %></button>
