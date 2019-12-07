@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   get 'user/login'
   get 'sub/list'
   get 'sub/add'
-  get 'page/contact'
-  get 'page/submit'
+  get 'page/contact' => 'page#contact'
+  get 'page/submit' => 'page#about'
   get 'assets/images'
+
 
   resources :subscriptions
 
