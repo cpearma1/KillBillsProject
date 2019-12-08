@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_163320) do
+ActiveRecord::Schema.define(version: 2019_12_07_183923) do
 
   create_table "subscriptions", force: :cascade do |t|
     t.string "service_name"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 2019_12_04_163320) do
     t.date "date_subscribed"
     t.date "date_of_expiration"
     t.boolean "free_trial"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.string "name"
+    t.string "oauth_token"
+    t.datetime "oauth_expires_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

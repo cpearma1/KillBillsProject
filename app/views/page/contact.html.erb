@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="application.scss"/>
 </head>
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   	<a class="navbar-brand" href="#">Kill Bills</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,9 +17,11 @@
         <a class="nav-item nav-link" href="#"><%= link_to 'Subscriptions', subscriptions_path %></a>
         <a class="nav-item nav-link" href="#"><%= link_to 'Contact', page_contact_path %></a>
         <a class="nav-item nav-link" href="#"><%= link_to 'About', page_about_path %></a>
+        <a class="nav-item nav-link" href="#"><%= link_to "Sign out", signout_path, id: "sign_out" %></a>
       </div>
     </div>
   </nav>
+  Signed in as <strong><%= current_user.name %></strong>!
   <br>
 
 
