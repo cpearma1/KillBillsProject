@@ -8,5 +8,5 @@ Feature: Allow user to log into their account.
     Given I am on the login page
     And I should see the "uname" field
     And I should see the "psw" field
-    When I click the the "Login" button
-    Then I should be on the "list" page
+    Then I click the the "submit" button
+    And I should be on the "list" page

@@ -10,8 +10,12 @@ And ("I should see the psw field") do |string|
     expect(page).to have_field(string)
 end
 
-When("I click the the {string} button") do
-  click_button string
+Then ("I click the the {string} button") do
+   expect(page).to have_button(string)
+end
+
+And ("I should be on the {string} page") do
+    expect(page).be sub_list_path
 end
 
 #Then ("I should be on the list page") do
