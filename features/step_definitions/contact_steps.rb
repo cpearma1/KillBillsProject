@@ -1,4 +1,4 @@
-Given ("I am on the contact page") do
+Given("I am on the contact page") do
     visit page_contact_path
 end
 
