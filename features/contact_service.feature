@@ -10,5 +10,5 @@ Feature: Enter information to contact and IT respresentative
     And I see the "lastname" field
     And I see the "email" field
     And I see the "Subject" field
-    When I click on the "submit" button
+    When I click on the "Submit" button
     Then I will be on the submit page
