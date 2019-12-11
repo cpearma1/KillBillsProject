@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'page/contact' => 'page#contact'
   get 'page/submit'
   get 'assets/images'
+  get 'subscriptions/edit' => 'subscriptions#edit'
 
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
 
   resources :subscriptions
 
+  get "subscriptions/edit"
   root 'welcome#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
