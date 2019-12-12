@@ -1,19 +1,19 @@
 class SubscriptionsController < ApplicationController
 	def index
-		@subscription = Subscription.order('date_of_expiration ASC')
+		@subscriptions = Subscription.order('date_of_expiration ASC')
 	end
 
 	def show
-		@subscription = Subscription.find(params[:id])
+		@subscriptions = Subscription.find(params[:id])
 	end
 
 	def new
 	end
 
 	def create
-		@subscription = Subscription.new(subscription_params)
+		@subscriptions = Subscription.new(subscription_params)
 
-		@subscription.save
+		@subscriptions.save
 		redirect_to subscriptions_path
 	end
 
@@ -22,17 +22,17 @@ class SubscriptionsController < ApplicationController
 	end
 
 	def update
-		@subscription =  Subscription.find(params[:id])
-		if @subscription.update(subscription_params)
-			redirect_to subscriptions_path
+		@subscriptions =  Subscription.find(params[:id])
+		if @subscriptions.update(subscription_params)
+			redirect_to @subscriptions
 		else
 			render 'edit'
 		end
 	end
 
 	def destroy
-		@subscription = Subscription.find(params[:id])
-		@subscription.destroy
+		@subscriptions = Subscription.find(params[:id])
+		@subscriptions.destroy
 
 		redirect_to subscriptions_path
 	end
