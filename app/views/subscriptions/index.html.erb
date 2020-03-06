@@ -1,0 +1,53 @@
+<title>index</title>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  	<a class="navbar-brand" href="#">Kill Bills</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#"><%= link_to 'Subscriptions', subscriptions_path %></a>
+        <a class="nav-item nav-link" href="#"><%= link_to 'Contact', page_contact_path %></a>
+        <a class="nav-item nav-link" href="#"><%= link_to 'About', page_about_path %></a>
+        <a class="nav-item nav-link" href="#"><%= link_to "Sign out", signout_path, id: "sign_out" %></a>
+      </div>
+    </div>
+  </nav>
+  Signed in as <strong><%= current_user.name %></strong>!
+  <br>
+  
+<h1>Listing Subscriptions</h1>
+
+<br>
+<div class="text-center">
+<button type="button" class="btn btn-dark"><%= link_to 'New subscription', new_subscription_path %></button>
+</div>
+<br>
+<div class="table-responsive">
+<table class="table table-dark table-sm">
+	<thead>
+  <tr>
+	<th>Service</th>
+    <th>Monthly Payment</th>
+    <th>Date Subscribed</th>
+		<th>Date of Payment/Expiration</th>
+		<th>Free Trial</th>
+  </tr>
+	</thead>
+  <% @subscriptions.each do |subscription| %>
+    <tr>
+      <td><%= subscription.service_name %></td>
+      <td>$<%= subscription.monthly_payment %></td>
+			<td><%= subscription.date_subscribed %></td>
+			<td><%= subscription.date_of_expiration %></td>
+			<td><%= subscription.free_trial %></td>
+      <td><%= link_to 'Show', subscription_path(subscription) %></td><th></th>
+      <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td><th></th>
+			<td><%= link_to 'Destroy',
+																subscription_path(subscription),
+																method: :delete,
+																data: { confirm: 'Are you sure?' } %></td><th></th>
+    </tr>
+  <% end %>
+</table>
+</div>

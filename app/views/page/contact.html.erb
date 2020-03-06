@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="application.scss"/>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  	<a class="navbar-brand" href="#">Kill Bills</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#"><%= link_to 'Subscriptions', subscriptions_path %></a>
+        <a class="nav-item nav-link" href="#"><%= link_to 'Contact', page_contact_path %></a>
+        <a class="nav-item nav-link" href="#"><%= link_to 'About', page_about_path %></a>
+        <a class="nav-item nav-link" href="#"><%= link_to "Sign out", signout_path, id: "sign_out" %></a>
+      </div>
+    </div>
+  </nav>
+  
+  <br>
+
+
+<div class="container">
+    <div style="text-align:center">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out if you have any questions or concerns.</p>
+    </div>
+    <div class="row">
+
+        <div class="container-fluid text-center">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="email">Your Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email address..">
+                <label for="creator">Who would you like to contact?</label>
+                <select id="creator" name="creator">
+                    <option value="Customer Service">Customer Service</option>
+                    <option value="Your Financial Institution">Your Financial Institution</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <button><a href="#submit"><%= link_to "Submit", page_submit_path %></a></button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

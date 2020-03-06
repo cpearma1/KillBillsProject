@@ -1,0 +1,28 @@
+<h1> New Subscription! </h1>
+<%= form_for :subscription, url: subscriptions_path do |f| %>
+	<p>
+		<%= f.label :service_name %><br>
+		<%= f.text_field :service_name %>
+	</p>
+	<p>
+		<%= f.label :monthly_payment %><br>
+		<%= f.number_field :monthly_payment, :placeholder => '$', step: 0.01 %>
+	</p>
+	<p>
+		<%= f.label :date_subscribed %><br>
+        <%= f.date_field :date_subscribed, class: 'form-control' %>
+	</p>
+	<p>
+		<%= f.label :date_of_payment_or_expiration %><br>
+        <%= f.date_field :date_of_expiration, class: 'form-control' %>
+	</p>
+	<p>
+		<%= f.label :free_trial %><br>
+        <%= f.check_box :free_trial %>
+    </p>
+	<p>
+	<%= f.submit %>
+	</p> 
+	<br>
+	<button type="button" class="btn btn-dark"><%= link_to 'Back', subscriptions_path %></button>
+<% end %>

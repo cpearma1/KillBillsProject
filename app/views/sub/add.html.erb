@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add a Subscription</title>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home"><%= link_to "Home", sub_list_path %></a>
+  <a href="#login"><%= link_to "Login", user_login_path %></a>
+  <a href="#about"><%= link_to "About Us", page_about_path %></a>
+  <a href="#contact"><%= link_to "Contact", page_contact_path %></a>
+</div>
+  
+  <form action="action_page.php" method="post">
+  
+    <div class="container">
+      <label for="servname"><b>Subscribed Service:</b></label>
+      <input type="text" placeholder="Enter Service Name" name="servname" required><br>
+      <label for="mpayment"><b>Monthly Payment Amount:</b></label>
+      <input type="text" placeholder="Enter Amount" name="mpayment" required><br>
+      <label for="pdate"><b>Monthly Payment Date:</b></label>
+      <input type="date" placeholder="Payment Date" name="pdate" required><br>
+      <label for="startdate"><b>Payment Start Date:</b></label>
+      <input type="date" placeholder="Enter Payment Start Date" name="startdate" required><br>
+      <form>
+          <br>
+          <p>Is This a Free Trial?</p>
+          <input type="radio" name="freetrial" value="yes"> Yes<br>
+          <input type="radio" name="freetrial" value="no"> No<br>
+      </form>
+      <br><button type="submit"><%= link_to "Submit", sub_list_path %></button>
+    </div>
+   
+    </div>
+  </form>
+  
+  </div>
+  
+</div>
+
+</body>
+</html>
